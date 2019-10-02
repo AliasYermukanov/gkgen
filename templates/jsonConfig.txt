@@ -1,0 +1,20 @@
+{
+  "elastic":{
+    "connection_url":["http://example_url:9200", "http://example_url:9200", "http://example_url:9200"]
+  },
+  "cassandra": {
+    "connection_ip": [
+      "your_ip",
+      "your_ip",
+      "your_ip"
+    ]
+  },
+  "rabbit":{
+  "host": "example_api",
+  "virtual_host":"test",
+  "port":5672,
+  "user":"test",
+  "password":"test",
+  "log_level":5
+  }
+}

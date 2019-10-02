@@ -6,23 +6,23 @@ import (
 	"strings"
 )
 
-func ServiceGen(args []string) {
+func ServiceGen(args []string){
 	var s string
-	for _, v := range args {
+	for _,v := range args {
 		s += v
 	}
 
 	err := os.MkdirAll(s+"-api", 0777)
 	if err != nil {
-		fmt.Println("error:", err.Error())
+		fmt.Println("error:",err.Error())
 	}
 	err = os.MkdirAll(s+"-api/src/"+s, 0777)
 	if err != nil {
-		fmt.Println("error:", err.Error())
+		fmt.Println("error:",err.Error())
 	}
 	err = os.MkdirAll(s+"-api/src/config", 0777)
 	if err != nil {
-		fmt.Println("error:", err.Error())
+		fmt.Println("error:",err.Error())
 	}
 
 	err = maingen(s)
@@ -46,6 +46,10 @@ func ServiceGen(args []string) {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func GenerateEndpoints(args []string){
+
 }
 
 func before(value string, a string) string {
